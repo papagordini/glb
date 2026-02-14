@@ -24,19 +24,24 @@
   </style>
 </head>
 <body>
-
-  <!-- More “punchy” (usually looks more saturated) -->
-  <model-viewer
-    src="assets/polica.glb"
-    camera-controls
-    auto-rotate
-    shadow-intensity="0.7"
-    environment-image="neutral"
-    environment-intensity="0.7"
-    tone-mapping="neutral"
-    exposure="1.0">
-  </model-viewer>
-
+  <model-viewer src="polica.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1" shadow-softness="1">
+    <button class="Hotspot" slot="hotspot-3" data-position="-0.37139545981294936m 0.09531883613293685m -0.10696575685590497m" data-normal="-2.2204460492502968e-16m -3.774758283725533e-15m -1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Jebeni nosač</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-0.0010009025712899014m 0.06259237129945859m -0.10693429135167595m" data-normal="-1.0842000000000036e-18m -3.3306690738754696e-15m -1m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Montažni profil</div>
+    </button><button class="Hotspot" slot="hotspot-6" data-position="0.4073969300861516m 0.000010254327207803726m 0.01344808229192651m" data-normal="0m 1m 0m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Rose gold</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
 </body>
 </html>
 
