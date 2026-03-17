@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stol model v2</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body{
+      margin:0;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#4D4D4D;
+    }
+    model-viewer{
+      width:150vw;
+      height:100vh;
+      border-radius:10px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.25);
+      background:#fff; /* viewer canvas bg */
+    }
+  </style>
+</head>
+<body>
+  <li><a href="index.html">polica</a></li>
+  <li><a href="index2.html">polica sa komentarima</a></li>
+  <li><a href="stol.html">stol</a></li>
+  <model-viewer src="assets/stol.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1" shadow-softness="1">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+</body>
+</html>
