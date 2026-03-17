@@ -39,14 +39,18 @@
       padding: 14px 16px;
       text-decoration: none;
     }
+    ul li a.active {
+      font-weight:bold;
+      background-color:#222222;
+    }
     ul li a:hover {
-      background-color: #111111
+      background-color: #111111;
     }
        
     model-viewer{
-      margin-top:50px
-      width:150vw;
-      height:100vh;
+      margin-top:150px
+      width:100%;
+      height:100%;
       border-radius:10px;
       box-shadow:0 4px 20px rgba(0,0,0,0.25);
       background:#fff; /* viewer canvas bg */
@@ -58,6 +62,7 @@
   <li><a href="index.html">polica</a></li>
   <li><a href="index2.html">polica sa komentarima</a></li>
   <li><a href="index3.html">stol</a></li>
+  <li><a href="index4.html" class="active">stol v2</a></li>
   </ul>
   <model-viewer src="assets/stol.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1" shadow-softness="1">
     <div class="progress-bar hide" slot="progress-bar">
