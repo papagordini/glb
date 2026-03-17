@@ -9,11 +9,13 @@
       margin:0;
       padding:0;
       display:flex;
+      flex-direction:column;
       gap:12px;
       justify-content:center;
-      align-items:center;
+      align-items:stretch;
       height:100vh;
       background:#4D4D4D;
+      padding-top.60px;
     }
     h2, p {
       margin: 10px;
@@ -48,9 +50,9 @@
     }
        
     model-viewer{
-      margin-top:100px;
+      margin-top:0;
       width:100%;
-      height:100%;
+      height:calc(100vh-60px);
       border-radius:10px;
       box-shadow:0 4px 20px rgba(0,0,0,0.25);
       background:#fff; /* viewer canvas bg */
