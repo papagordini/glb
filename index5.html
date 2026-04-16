@@ -49,8 +49,9 @@
 
     babylon-viewer {
       margin-top: 100px;
+      display: block;
       width: 100%;
-      height: calc(100vh - 100px);
+      height: 100%;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.25);
       background: #fff;
@@ -62,13 +63,11 @@
     <li><a href="index.html">polica</a></li>
     <li><a href="index2.html">polica sa komentarima</a></li>
     <li><a href="index3.html">stol</a></li>
-    <li><a href="index4.html">stol v2</a></li>
-    <li><a href="index5.html" class="active">stol v2</a></li>
+    <li><a href="index4.html" class="active">stol v2</a></li>
   </ul>
 
   <babylon-viewer
     source="assets/stolic_manji.glb"
-    environment="neutral"
     exposure="0.6"
     camera-auto-orbit
     camera-auto-orbit-speed="0.5"
