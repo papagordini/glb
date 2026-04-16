@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Stol model v2 babylon model viewer</title>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer@8.7.0/dist/babylon-viewer.esm.min.js"></script>
+  <title>Stol model v2</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -44,7 +44,6 @@
     ul li a:hover {
       background-color: #111111;
     }
-
     #viewer-wrap {
       margin-top: 100px;
       width: 100%;
@@ -54,8 +53,7 @@
       overflow: hidden;
       background: #fff;
     }
-
-    babylon-viewer {
+    model-viewer {
       display: block;
       width: 100%;
       height: 100%;
@@ -70,15 +68,20 @@
     <li><a href="index4.html">stol v2</a></li>
     <li><a href="index5.html" class="active">stol v2 (babylon)</a></li>
   </ul>
-
   <div id="viewer-wrap">
-    <babylon-viewer
-      source="assets/stolic_manji.glb"
-      exposure="0.6"
-      camera-auto-orbit
-      camera-auto-orbit-speed="0.5"
-    ></babylon-viewer>
+    <model-viewer
+      src="assets/stolic_manji.glb"
+      camera-controls
+      auto-rotate
+      auto-rotate-delay="0"
+      exposure="0.5"
+      environment-image="neutral"
+      tone-mapping="neutral"
+      shadow-intensity="0.5"
+      shadow-softness="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+    ></model-viewer>
   </div>
-
 </body>
 </html>
