@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <title>Stol model v2</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer/dist/babylon-viewer.esm.min.js"></script>
   <style>
-    body{
-      margin:0;
-      padding:0;
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      background:#4D4D4D;
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #4D4D4D;
     }
     h2, p {
       margin: 10px;
     }
     ul {
       list-style-type: none;
-      margin:0;
-      padding:0;
+      margin: 0;
+      padding: 0;
       overflow: hidden;
       background-color: #333333;
-      position:fixed;
-      top:0;
-      width:100%;
-      z-index:1000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
     ul li {
-      float:left;
+      float: left;
     }
     ul li a {
       display: block;
@@ -40,40 +40,38 @@
       text-decoration: none;
     }
     ul li a.active {
-      font-weight:bold;
+      font-weight: bold;
       background-color: #222222;
     }
     ul li a:hover {
       background-color: #111111;
     }
-       
-    model-viewer{
-      margin-top:100px;
-      width:100%;
-      height:100%;
-      border-radius:10px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.25);
-      background:#fff; /* viewer canvas bg */
+
+    babylon-viewer {
+      margin-top: 100px;
+      width: 100%;
+      height: calc(100vh - 100px);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      background: #fff;
     }
   </style>
 </head>
 <body>
   <ul>
-  <li><a href="index.html">polica</a></li>
-  <li><a href="index2.html">polica sa komentarima</a></li>
-  <li><a href="index3.html">stol</a></li>
-  <li><a href="index4.html" class="active">stol v2</a></li>
+    <li><a href="index.html">polica</a></li>
+    <li><a href="index2.html">polica sa komentarima</a></li>
+    <li><a href="index3.html">stol</a></li>
+    <li><a href="index4.html" class="active">stol v2</a></li>
+    <li><a href="index5.html" class="active">stol v2</a></li>
   </ul>
-  <model-viewer src="assets/stolic_manji.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1" shadow-softness="1">
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-    </div>
-</model-viewer>
+
+  <babylon-viewer
+    source="assets/stolic_manji.glb"
+    environment="neutral"
+    exposure="0.6"
+    camera-auto-orbit
+    camera-auto-orbit-speed="0.5"
+  ></babylon-viewer>
 </body>
 </html>
