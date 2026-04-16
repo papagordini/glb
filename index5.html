@@ -5,14 +5,12 @@
   <title>Stol model v2</title>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer/dist/babylon-viewer.esm.min.js"></script>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       background: #4D4D4D;
     }
     h2, p {
@@ -47,14 +45,20 @@
       background-color: #111111;
     }
 
-    babylon-viewer {
+    #viewer-wrap {
       margin-top: 100px;
+      width: 100%;
+      height: calc(100vh - 100px);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    babylon-viewer {
       display: block;
       width: 100%;
       height: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-      background: #fff;
     }
   </style>
 </head>
@@ -63,15 +67,18 @@
     <li><a href="index.html">polica</a></li>
     <li><a href="index2.html">polica sa komentarima</a></li>
     <li><a href="index3.html">stol</a></li>
-    <li><a href="index4.html" class="active">stol v2</a></li>
-    <li><a href="index5.html">stol v2</a></li>
+    <li><a href="index4.html">stol v2</a></li>
+    <li><a href="index5.html" class="active">stol v2</a></li>
   </ul>
 
-  <babylon-viewer
-    source="assets/stolic_manji.glb"
-    exposure="0.6"
-    camera-auto-orbit
-    camera-auto-orbit-speed="0.5"
-  ></babylon-viewer>
+  <div id="viewer-wrap">
+    <babylon-viewer
+      source="assets/stolic_manji.glb"
+      exposure="0.6"
+      camera-auto-orbit
+      camera-auto-orbit-speed="0.5"
+    ></babylon-viewer>
+  </div>
+
 </body>
 </html>
